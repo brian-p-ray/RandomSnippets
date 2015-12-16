@@ -1,0 +1,1 @@
+<?php f(0,1);function f($a,$b){echo number_format($a,0,'','').'<br>'.number_format($b,0,'','').'<br>';$a=$a+$b;$b=$a+$b;f($a,$b);}
