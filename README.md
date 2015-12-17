@@ -11,6 +11,9 @@ This is a small program that chooses the closest "web safe" color based on the h
 ### fibonacci
 This was an attempt at "golfing" the fibonacci sequence. Therefore, it is very ugly and probably not very efficient.
 
+### powerball
+I threw together a quick function that loops through all of the powerball data (up to this point) and tallies how many times each number has been called. It then spits out the 5 most likely numbers as well as the most likely powerball number to be called.
+
 ### randomString
 When creating passwords, I generally use online password generators. I read something one time about the possibility that these web apps may store the passwords that they generate. So, I thought it might be a good idea to roll my own. This is a CLI app that once executed, asks you which types of characters you would like and then how long you would like the password to be. It then outputs a random string that fits your criteria.
 
