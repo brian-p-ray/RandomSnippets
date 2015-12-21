@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>game of life</title>
+		<style>
+			table {
+				width: 202px;
+				border-spacing: 0;
+			    border: 1px solid #000;
+			}
+			tbody {
+				border: none;
+			}
+			tr {
+				border: none;
+			}
+			td {
+				width: 10px;
+				height: 10px;
+				padding: 0;
+				border: none;
+			}
+			.active {
+				background: #000;
+			}
+		</style>
+	</head>
+	<body>
+		<table>			<tr>
+				<td class="x0y0"></td>
+				<td class="x1y0"></td>
+				<td class="x2y0"></td>
+				<td class="x3y0"></td>
+				<td class="x4y0"></td>
+				<td class="x5y0"></td>
+				<td class="x6y0"></td>
+				<td class="x7y0"></td>
+				<td class="x8y0"></td>
+				<td class="x9y0"></td>
+				<td class="x10y0"></td>
+				<td class="x11y0"></td>
+				<td class="x12y0"></td>
+				<td class="x13y0"></td>
+				<td class="x14y0"></td>
+				<td class="x15y0"></td>
+				<td class="x16y0"></td>
+				<td class="x17y0"></td>
+				<td class="x18y0"></td>
+				<td class="x19y0"></td>
+			</tr>
+			<tr>
+				<td class="x0y1"></td>
+				<td class="x1y1"></td>
+				<td class="x2y1"></td>
+				<td class="x3y1"></td>
+				<td class="x4y1"></td>
+				<td class="x5y1"></td>
+				<td class="x6y1"></td>
+				<td class="x7y1"></td>
+				<td class="x8y1"></td>
+				<td class="x9y1"></td>
+				<td class="x10y1"></td>
+				<td class="x11y1"></td>
+				<td class="x12y1"></td>
+				<td class="x13y1"></td>
+				<td class="x14y1"></td>
+				<td class="x15y1"></td>
+				<td class="x16y1"></td>
+				<td class="x17y1"></td>
+				<td class="x18y1"></td>
+				<td class="x19y1"></td>
+			</tr>
+			<tr>
+				<td class="x0y2"></td>
+				<td class="x1y2"></td>
+				<td class="x2y2"></td>
+				<td class="x3y2"></td>
+				<td class="x4y2"></td>
+				<td class="x5y2"></td>
+				<td class="x6y2"></td>
+				<td class="x7y2"></td>
+				<td class="x8y2"></td>
+				<td class="x9y2"></td>
+				<td class="x10y2"></td>
+				<td class="x11y2"></td>
+				<td class="x12y2"></td>
+				<td class="x13y2"></td>
+				<td class="x14y2"></td>
+				<td class="x15y2"></td>
+				<td class="x16y2"></td>
+				<td class="x17y2"></td>
+				<td class="x18y2"></td>
+				<td class="x19y2"></td>
+			</tr>
+			<tr>
+				<td class="x0y3"></td>
+				<td class="x1y3"></td>
+				<td class="x2y3"></td>
+				<td class="x3y3"></td>
+				<td class="x4y3"></td>
+				<td class="x5y3"></td>
+				<td class="x6y3"></td>
+				<td class="x7y3"></td>
+				<td class="x8y3"></td>
+				<td class="x9y3"></td>
+				<td class="x10y3"></td>
+				<td class="x11y3"></td>
+				<td class="x12y3"></td>
+				<td class="x13y3"></td>
+				<td class="x14y3"></td>
+				<td class="x15y3"></td>
+				<td class="x16y3"></td>
+				<td class="x17y3"></td>
+				<td class="x18y3"></td>
+				<td class="x19y3"></td>
+			</tr>
+			<tr>
+				<td class="x0y4"></td>
+				<td class="x1y4"></td>
+				<td class="x2y4"></td>
+				<td class="x3y4"></td>
+				<td class="x4y4"></td>
+				<td class="x5y4"></td>
+				<td class="x6y4"></td>
+				<td class="x7y4"></td>
+				<td class="x8y4"></td>
+				<td class="x9y4"></td>
+				<td class="x10y4"></td>
+				<td class="x11y4"></td>
+				<td class="x12y4"></td>
+				<td class="x13y4"></td>
+				<td class="x14y4"></td>
+				<td class="x15y4"></td>
+				<td class="x16y4"></td>
+				<td class="x17y4"></td>
+				<td class="x18y4"></td>
+				<td class="x19y4"></td>
+			</tr>
+			<tr>
+				<td class="x0y5"></td>
+				<td class="x1y5"></td>
+				<td class="x2y5"></td>
+				<td class="x3y5"></td>
+				<td class="x4y5"></td>
+				<td class="x5y5"></td>
+				<td class="x6y5"></td>
+				<td class="x7y5"></td>
+				<td class="x8y5"></td>
+				<td class="x9y5"></td>
+				<td class="x10y5"></td>
+				<td class="x11y5"></td>
+				<td class="x12y5"></td>
+				<td class="x13y5"></td>
+				<td class="x14y5"></td>
+				<td class="x15y5"></td>
+				<td class="x16y5"></td>
+				<td class="x17y5"></td>
+				<td class="x18y5"></td>
+				<td class="x19y5"></td>
+			</tr>
+			<tr>
+				<td class="x0y6"></td>
+				<td class="x1y6"></td>
+				<td class="x2y6"></td>
+				<td class="x3y6"></td>
+				<td class="x4y6"></td>
+				<td class="x5y6"></td>
+				<td class="x6y6"></td>
+				<td class="x7y6"></td>
+				<td class="x8y6"></td>
+				<td class="x9y6"></td>
+				<td class="x10y6"></td>
+				<td class="x11y6"></td>
+				<td class="x12y6"></td>
+				<td class="x13y6"></td>
+				<td class="x14y6"></td>
+				<td class="x15y6"></td>
+				<td class="x16y6"></td>
+				<td class="x17y6"></td>
+				<td class="x18y6"></td>
+				<td class="x19y6"></td>
+			</tr>
+			<tr>
+				<td class="x0y7"></td>
+				<td class="x1y7"></td>
+				<td class="x2y7"></td>
+				<td class="x3y7"></td>
+				<td class="x4y7"></td>
+				<td class="x5y7"></td>
+				<td class="x6y7"></td>
+				<td class="x7y7"></td>
+				<td class="x8y7"></td>
+				<td class="x9y7"></td>
+				<td class="x10y7"></td>
+				<td class="x11y7"></td>
+				<td class="x12y7"></td>
+				<td class="x13y7"></td>
+				<td class="x14y7"></td>
+				<td class="x15y7"></td>
+				<td class="x16y7"></td>
+				<td class="x17y7"></td>
+				<td class="x18y7"></td>
+				<td class="x19y7"></td>
+			</tr>
+			<tr>
+				<td class="x0y8"></td>
+				<td class="x1y8"></td>
+				<td class="x2y8"></td>
+				<td class="x3y8"></td>
+				<td class="x4y8"></td>
+				<td class="x5y8"></td>
+				<td class="x6y8"></td>
+				<td class="x7y8"></td>
+				<td class="x8y8"></td>
+				<td class="x9y8"></td>
+				<td class="x10y8"></td>
+				<td class="x11y8"></td>
+				<td class="x12y8"></td>
+				<td class="x13y8"></td>
+				<td class="x14y8"></td>
+				<td class="x15y8"></td>
+				<td class="x16y8"></td>
+				<td class="x17y8"></td>
+				<td class="x18y8"></td>
+				<td class="x19y8"></td>
+			</tr>
+			<tr>
+				<td class="x0y9"></td>
+				<td class="x1y9"></td>
+				<td class="x2y9"></td>
+				<td class="x3y9"></td>
+				<td class="x4y9"></td>
+				<td class="x5y9"></td>
+				<td class="x6y9"></td>
+				<td class="x7y9"></td>
+				<td class="x8y9"></td>
+				<td class="x9y9"></td>
+				<td class="x10y9"></td>
+				<td class="x11y9"></td>
+				<td class="x12y9"></td>
+				<td class="x13y9"></td>
+				<td class="x14y9"></td>
+				<td class="x15y9"></td>
+				<td class="x16y9"></td>
+				<td class="x17y9"></td>
+				<td class="x18y9"></td>
+				<td class="x19y9"></td>
+			</tr>
+			<tr>
+				<td class="x0y10"></td>
+				<td class="x1y10"></td>
+				<td class="x2y10"></td>
+				<td class="x3y10"></td>
+				<td class="x4y10"></td>
+				<td class="x5y10"></td>
+				<td class="x6y10"></td>
+				<td class="x7y10"></td>
+				<td class="x8y10"></td>
+				<td class="x9y10"></td>
+				<td class="x10y10"></td>
+				<td class="x11y10"></td>
+				<td class="x12y10"></td>
+				<td class="x13y10"></td>
+				<td class="x14y10"></td>
+				<td class="x15y10"></td>
+				<td class="x16y10"></td>
+				<td class="x17y10"></td>
+				<td class="x18y10"></td>
+				<td class="x19y10"></td>
+			</tr>
+			<tr>
+				<td class="x0y11"></td>
+				<td class="x1y11"></td>
+				<td class="x2y11"></td>
+				<td class="x3y11"></td>
+				<td class="x4y11"></td>
+				<td class="x5y11"></td>
+				<td class="x6y11"></td>
+				<td class="x7y11"></td>
+				<td class="x8y11"></td>
+				<td class="x9y11"></td>
+				<td class="x10y11"></td>
+				<td class="x11y11"></td>
+				<td class="x12y11"></td>
+				<td class="x13y11"></td>
+				<td class="x14y11"></td>
+				<td class="x15y11"></td>
+				<td class="x16y11"></td>
+				<td class="x17y11"></td>
+				<td class="x18y11"></td>
+				<td class="x19y11"></td>
+			</tr>
+			<tr>
+				<td class="x0y12"></td>
+				<td class="x1y12"></td>
+				<td class="x2y12"></td>
+				<td class="x3y12"></td>
+				<td class="x4y12"></td>
+				<td class="x5y12"></td>
+				<td class="x6y12"></td>
+				<td class="x7y12"></td>
+				<td class="x8y12"></td>
+				<td class="x9y12"></td>
+				<td class="x10y12"></td>
+				<td class="x11y12"></td>
+				<td class="x12y12"></td>
+				<td class="x13y12"></td>
+				<td class="x14y12"></td>
+				<td class="x15y12"></td>
+				<td class="x16y12"></td>
+				<td class="x17y12"></td>
+				<td class="x18y12"></td>
+				<td class="x19y12"></td>
+			</tr>
+			<tr>
+				<td class="x0y13"></td>
+				<td class="x1y13"></td>
+				<td class="x2y13"></td>
+				<td class="x3y13"></td>
+				<td class="x4y13"></td>
+				<td class="x5y13"></td>
+				<td class="x6y13"></td>
+				<td class="x7y13"></td>
+				<td class="x8y13"></td>
+				<td class="x9y13"></td>
+				<td class="x10y13"></td>
+				<td class="x11y13"></td>
+				<td class="x12y13"></td>
+				<td class="x13y13"></td>
+				<td class="x14y13"></td>
+				<td class="x15y13"></td>
+				<td class="x16y13"></td>
+				<td class="x17y13"></td>
+				<td class="x18y13"></td>
+				<td class="x19y13"></td>
+			</tr>
+			<tr>
+				<td class="x0y14"></td>
+				<td class="x1y14"></td>
+				<td class="x2y14"></td>
+				<td class="x3y14"></td>
+				<td class="x4y14"></td>
+				<td class="x5y14"></td>
+				<td class="x6y14"></td>
+				<td class="x7y14"></td>
+				<td class="x8y14"></td>
+				<td class="x9y14"></td>
+				<td class="x10y14"></td>
+				<td class="x11y14"></td>
+				<td class="x12y14"></td>
+				<td class="x13y14"></td>
+				<td class="x14y14"></td>
+				<td class="x15y14"></td>
+				<td class="x16y14"></td>
+				<td class="x17y14"></td>
+				<td class="x18y14"></td>
+				<td class="x19y14"></td>
+			</tr>
+			<tr>
+				<td class="x0y15"></td>
+				<td class="x1y15"></td>
+				<td class="x2y15"></td>
+				<td class="x3y15"></td>
+				<td class="x4y15"></td>
+				<td class="x5y15"></td>
+				<td class="x6y15"></td>
+				<td class="x7y15"></td>
+				<td class="x8y15"></td>
+				<td class="x9y15"></td>
+				<td class="x10y15"></td>
+				<td class="x11y15"></td>
+				<td class="x12y15"></td>
+				<td class="x13y15"></td>
+				<td class="x14y15"></td>
+				<td class="x15y15"></td>
+				<td class="x16y15"></td>
+				<td class="x17y15"></td>
+				<td class="x18y15"></td>
+				<td class="x19y15"></td>
+			</tr>
+			<tr>
+				<td class="x0y16"></td>
+				<td class="x1y16"></td>
+				<td class="x2y16"></td>
+				<td class="x3y16"></td>
+				<td class="x4y16"></td>
+				<td class="x5y16"></td>
+				<td class="x6y16"></td>
+				<td class="x7y16"></td>
+				<td class="x8y16"></td>
+				<td class="x9y16"></td>
+				<td class="x10y16"></td>
+				<td class="x11y16"></td>
+				<td class="x12y16"></td>
+				<td class="x13y16"></td>
+				<td class="x14y16"></td>
+				<td class="x15y16"></td>
+				<td class="x16y16"></td>
+				<td class="x17y16"></td>
+				<td class="x18y16"></td>
+				<td class="x19y16"></td>
+			</tr>
+			<tr>
+				<td class="x0y17"></td>
+				<td class="x1y17"></td>
+				<td class="x2y17"></td>
+				<td class="x3y17"></td>
+				<td class="x4y17"></td>
+				<td class="x5y17"></td>
+				<td class="x6y17"></td>
+				<td class="x7y17"></td>
+				<td class="x8y17"></td>
+				<td class="x9y17"></td>
+				<td class="x10y17"></td>
+				<td class="x11y17"></td>
+				<td class="x12y17"></td>
+				<td class="x13y17"></td>
+				<td class="x14y17"></td>
+				<td class="x15y17"></td>
+				<td class="x16y17"></td>
+				<td class="x17y17"></td>
+				<td class="x18y17"></td>
+				<td class="x19y17"></td>
+			</tr>
+			<tr>
+				<td class="x0y18"></td>
+				<td class="x1y18"></td>
+				<td class="x2y18"></td>
+				<td class="x3y18"></td>
+				<td class="x4y18"></td>
+				<td class="x5y18"></td>
+				<td class="x6y18"></td>
+				<td class="x7y18"></td>
+				<td class="x8y18"></td>
+				<td class="x9y18"></td>
+				<td class="x10y18"></td>
+				<td class="x11y18"></td>
+				<td class="x12y18"></td>
+				<td class="x13y18"></td>
+				<td class="x14y18"></td>
+				<td class="x15y18"></td>
+				<td class="x16y18"></td>
+				<td class="x17y18"></td>
+				<td class="x18y18"></td>
+				<td class="x19y18"></td>
+			</tr>
+			<tr>
+				<td class="x0y19"></td>
+				<td class="x1y19"></td>
+				<td class="x2y19"></td>
+				<td class="x3y19"></td>
+				<td class="x4y19"></td>
+				<td class="x5y19"></td>
+				<td class="x6y19"></td>
+				<td class="x7y19"></td>
+				<td class="x8y19"></td>
+				<td class="x9y19"></td>
+				<td class="x10y19"></td>
+				<td class="x11y19"></td>
+				<td class="x12y19"></td>
+				<td class="x13y19"></td>
+				<td class="x14y19"></td>
+				<td class="x15y19"></td>
+				<td class="x16y19"></td>
+				<td class="x17y19"></td>
+				<td class="x18y19"></td>
+				<td class="x19y19"></td>
+			</tr>
+		</table>
+		<script src="//code.jquery.com/jquery-1.11.3.js"></script>
+		<script src="main.js"></script>
+	</body>
+</html>
