@@ -11,6 +11,9 @@ This is a small program that chooses the closest "web safe" color based on the h
 ### fibonacci
 This was an attempt at "golfing" the fibonacci sequence. Therefore, it is very ugly and probably not very efficient.
 
+### life
+A simple Conway's game of life. Screen is only 20x20.
+
 ### powerball
 I threw together a quick function that loops through all of the powerball data (up to this point) and tallies how many times each number has been called. It then spits out the 5 most likely numbers as well as the most likely powerball number to be called.
 
