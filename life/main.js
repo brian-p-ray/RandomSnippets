@@ -1,7 +1,23 @@
 var func;
-var xLimit = 20;
-var yLimit = 20;
+// if you set the grid to larger than 50x50, it takes more time
+// to execute than the delay in the setInterval function.
+// at 50x50, the execution time of process is between 79 and 95 milliseconds
+var xLimit = 50;
+var yLimit = 50;
 var grid = new Array();
+
+// create table
+var output = '<table>';
+
+for(var y = 0; y < yLimit; y++) {
+	output += '<tr>';
+	for(var x = 0; x < xLimit; x++) {
+		output += '<td class="x'+x+'y'+y+'"></td>'
+	}
+	output += '</tr>';
+}
+output += '</table>'
+$('body').append(output);
 
 for(var x = 0; x < xLimit; x++) {
 	for(var y = 0; y < yLimit; y++) {
@@ -20,7 +36,6 @@ display(grid);
 
 func = setInterval(function(){
 	grid = process(grid);
-	console.log(grid);
 	display(grid);
 },100);
 
