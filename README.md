@@ -22,3 +22,6 @@ When creating passwords, I generally use online password generators. I read some
 
 ##### future
 Keep an eye on this. I'll be adding more in the future.
+
+#### ideas
+- list of functions for converting values (ft to meters, cups to gallons, etc)
