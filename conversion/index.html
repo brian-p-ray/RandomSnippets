@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Conversion calculator</title>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+		<link rel="stylesheet" href="main.css">
+	</head>
+	<body>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<div class="panel panel-info">
+						<div class="panel-heading">fluid conversions</div>
+						<div class="panel-body">
+							<form id="convertFluidForm">
+								<div class="row">
+									<div class="form-group col-md-6">
+										<label for="fluidFrom">from</label>
+										<select id="fluidFrom" name="fluidFrom" class="form-control">
+											<option>--</option>
+											<option value="1">teaspoon</option>
+											<option value="3">tablespoon</option>
+											<option value="48">cup</option>
+											<option value="96">pint</option>
+											<option value="192">quart</option>
+											<option value="768">gallon</option>
+										</select>
+										<br>
+										<input type="text" id="fluidFromVal" name="fluidFromVal" class="form-control">
+									</div>
+									<div class="form-group col-md-6">
+										<label for="fluidTo">to</label>
+										<select id="fluidTo" name="fluidTo" class="form-control">
+											<option>--</option>
+											<option value="1">teaspoon</option>
+											<option value="3">tablespoon</option>
+											<option value="48">cup</option>
+											<option value="96">pint</option>
+											<option value="192">quart</option>
+											<option value="768">gallon</option>
+										</select>
+										<br>
+										<input type="text" id="fluidToVal" name="fluidToVal" class="form-control" disabled="disabled">
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-md-12 text-right">
+										<button type="button" class="btn btn-info btn-lg" id="fluidConvertButton">Convert</button>
+									</div>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+		<script src="main.js"></script>
+	</body>
+</html>
