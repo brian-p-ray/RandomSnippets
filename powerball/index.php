@@ -1,6 +1,8 @@
 <!-- WB1 WB2 WB3 WB4 WB5 PB -->
 <?php
 $winningNumbers = array(
+	array('numbers' => array('42', '15', '06', '05', '29'), 'pbnumber' => '10'),
+	array('numbers' => array('12', '61', '54', '38', '36'), 'pbnumber' => '22'),
 	array('numbers' => array('65', '40', '44', '59', '27'), 'pbnumber' => '20'),
 	array('numbers' => array('67', '16', '63', '38', '55'), 'pbnumber' => '25'),
 	array('numbers' => array('30', '68', '59', '41', '28'), 'pbnumber' => '10'),
