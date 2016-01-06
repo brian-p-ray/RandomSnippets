@@ -11,13 +11,13 @@
 			<div class="row">
 				<div class="col-md-12">
 					<div class="panel panel-info">
-						<div class="panel-heading">fluid conversions</div>
+						<div class="panel-heading">volume conversions</div>
 						<div class="panel-body">
-							<form id="convertFluidForm">
+							<form id="convertVolumeForm">
 								<div class="row">
 									<div class="form-group col-md-6">
-										<label for="fluidFrom">from</label>
-										<select id="fluidFrom" name="fluidFrom" class="form-control">
+										<label for="volumeFrom">from</label>
+										<select id="volumeFrom" name="volumeFrom" class="form-control">
 											<option>--</option>
 											<option value="1">teaspoon</option>
 											<option value="3">tablespoon</option>
@@ -27,11 +27,11 @@
 											<option value="768">gallon</option>
 										</select>
 										<br>
-										<input type="text" id="fluidFromVal" name="fluidFromVal" class="form-control">
+										<input type="text" id="volumeFromVal" name="volumeFromVal" class="form-control">
 									</div>
 									<div class="form-group col-md-6">
-										<label for="fluidTo">to</label>
-										<select id="fluidTo" name="fluidTo" class="form-control">
+										<label for="volumeTo">to</label>
+										<select id="volumeTo" name="volumeTo" class="form-control">
 											<option>--</option>
 											<option value="1">teaspoon</option>
 											<option value="3">tablespoon</option>
@@ -41,12 +41,138 @@
 											<option value="768">gallon</option>
 										</select>
 										<br>
-										<input type="text" id="fluidToVal" name="fluidToVal" class="form-control" disabled="disabled">
+										<input type="text" id="volumeToVal" name="volumeToVal" class="form-control" disabled="disabled">
 									</div>
 								</div>
 								<div class="row">
 									<div class="col-md-12 text-right">
-										<button type="button" class="btn btn-info btn-lg" id="fluidConvertButton">Convert</button>
+										<button type="button" class="btn btn-info btn-lg" id="volumeConvertButton">Convert</button>
+									</div>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-12">
+					<div class="panel panel-info">
+						<div class="panel-heading">weight conversions</div>
+						<div class="panel-body">
+							<form id="convertForm">
+								<div class="row">
+									<div class="form-group col-md-6">
+										<label for="weightFrom">from</label>
+										<select id="weightFrom" name="weightFrom" class="form-control">
+											<option>--</option>
+											<option value=".001">milligram</option>
+											<option value=".01">centigram</option>
+											<option value="0.0647989">grain</option>
+											<option value=".1">decigram</option>
+											<option value="1">gram</option>
+											<option value="1.77185">dram</option>
+											<option value="28.3495">ounce</option>
+											<option value="10">dekagram</option>
+											<option value="100">hectogram</option>
+											<option value="453.592">pound</option>
+											<option value="6350.29">stone</option>
+											<option value="1000">kilogram</option>
+											<option value="907185">short ton</option>
+											<option value="1000000">metric ton</option>
+											<option value="1016050">long ton</option>
+										</select>
+										<br>
+										<input type="text" id="weightFromVal" name="weightFromVal" class="form-control">
+									</div>
+									<div class="form-group col-md-6">
+										<label for="weightTo">to</label>
+										<select id="weightTo" name="weightTo" class="form-control">
+											<option>--</option>
+											<option value=".001">milligram</option>
+											<option value=".01">centigram</option>
+											<option value="0.0647989">grain</option>
+											<option value=".1">decigram</option>
+											<option value="1">gram</option>
+											<option value="1.77185">dram</option>
+											<option value="28.3495">ounce</option>
+											<option value="10">dekagram</option>
+											<option value="100">hectogram</option>
+											<option value="453.592">pound</option>
+											<option value="6350.29">stone</option>
+											<option value="1000">kilogram</option>
+											<option value="907185">short ton</option>
+											<option value="1000000">metric ton</option>
+											<option value="1016050">long ton</option>
+										</select>
+										<br>
+										<input type="text" id="weightToVal" name="weightToVal" class="form-control" disabled="disabled">
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-md-12 text-right">
+										<button type="button" class="btn btn-info btn-lg" id="weightConvertButton" data-type="weight">Convert</button>
+									</div>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-12">
+					<div class="panel panel-info">
+						<div class="panel-heading">length conversions</div>
+						<div class="panel-body">
+							<form id="convertForm">
+								<div class="row">
+									<div class="form-group col-md-6">
+										<label for="lengthFrom">from</label>
+										<select id="lengthFrom" name="lengthFrom" class="form-control">
+											<option>--</option>
+											<option value="1">millimeter</option>
+											<option value="10">centimeter</option>
+											<option value="25.4">inch</option>
+											<option value="100">decimeter</option>
+											<option value="304.8">foot</option>
+											<option value="914.4">yard</option>
+											<option value="1000">meter</option>
+											<option value="1828.8">fathom</option>
+											<option value="5029.2">rod</option>
+											<option value="10000">dekameter</option>
+											<option value="201168">furlong</option>
+											<option value="1000000">kilometer</option>
+											<option value="1609344">mile</option>
+											<option value="1851998.328">nautical mile</option>
+										</select>
+										<br>
+										<input type="text" id="lengthFromVal" name="lengthFromVal" class="form-control">
+									</div>
+									<div class="form-group col-md-6">
+										<label for="lengthTo">to</label>
+										<select id="lengthTo" name="lengthTo" class="form-control">
+											<option>--</option>
+											<option value="1">millimeter</option>
+											<option value="10">centimeter</option>
+											<option value="25.4">inch</option>
+											<option value="100">decimeter</option>
+											<option value="304.8">foot</option>
+											<option value="914.4">yard</option>
+											<option value="1000">meter</option>
+											<option value="1828.8">fathom</option>
+											<option value="5029.2">rod</option>
+											<option value="10000">dekameter</option>
+											<option value="201168">furlong</option>
+											<option value="1000000">kilometer</option>
+											<option value="1609344">mile</option>
+											<option value="1851998.328">nautical mile</option>
+										</select>
+										<br>
+										<input type="text" id="lengthToVal" name="lengthToVal" class="form-control" disabled="disabled">
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-md-12 text-right">
+										<button type="button" class="btn btn-info btn-lg" id="lengthConvertButton" data-type="length">Convert</button>
 									</div>
 								</div>
 							</form>

@@ -1,8 +1,8 @@
-$('#fluidConvertButton').on('click', function(){
-	var fromMeasurement = $('#fluidFrom').val();
-	var toMeasurement = $('#fluidTo').val();
-	var fromVal = $('#fluidFromVal').val();
-	var $to = $('#fluidToVal');
+$('#volumeConvertButton').on('click', function(){
+	var fromMeasurement = $('#volumeFrom').val();
+	var toMeasurement = $('#volumeTo').val();
+	var fromVal = $('#volumeFromVal').val();
+	var $to = $('#volumeToVal');
 
 	if(!fromMeasurement || !toMeasurement || !fromVal) {
 		return false;
@@ -13,6 +13,20 @@ $('#fluidConvertButton').on('click', function(){
 	var divisor = divisors.sort(compareNumbers).reverse()[0];
 	$to.val(getFraction(fromMeasurement*fromVal, toMeasurement, divisor));
 });
+
+$('#weightConvertButton, #lengthConvertButton').on('click', function(){
+	postConversion($(this).data('type'));
+});
+
+function postConversion(type) {
+	var fromMeasurement = $('#'+type+'From').val();
+	var toMeasurement = $('#'+type+'To').val();
+	var fromVal = $('#'+type+'FromVal').val();
+	var $to = $('#'+type+'ToVal');
+
+	var fromValue = fromMeasurement * fromVal;
+	$to.val(fromValue / toMeasurement);
+}
 
 function getDivisors(num) {
 	var arr = new Array();
