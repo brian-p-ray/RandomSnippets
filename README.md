@@ -8,6 +8,9 @@ I had a conversation with a coworker years ago about metric vs imperial. It led 
 ### color
 This is a small program that chooses the closest "web safe" color based on the hex color you imput. It calculates the difference in decimal between the color you supplied and each of the web safe colors. It then returns the color with the least calculable difference.
 
+### conversion
+Forms to convert units. Currently only converts kitchen measurements (teaspoons, tablespoons, cups, pints, quarts, gallons).
+
 ### fibonacci
 This was an attempt at "golfing" the fibonacci sequence. Therefore, it is very ugly and probably not very efficient.
 
