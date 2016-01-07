@@ -69,8 +69,7 @@ function getFraction(num1, num2, divisor) {
 		var num = parseInt(num1/num2, 10);
 
 		if(num1%num2 != 0) {
-			var realNum = parseInt(num1/num2, 10);
-			return realNum + ' ' + getFraction(num1 - (num2*realNum), num2, divisor);
+			return num + ' ' + getFraction(num1 - (num2*num), num2, divisor);
 		}
 		return num;
 	}
