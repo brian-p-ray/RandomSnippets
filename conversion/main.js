@@ -18,6 +18,11 @@ $('#weightConvertButton, #lengthConvertButton').on('click', function(){
 	postConversion($(this).data('type'));
 });
 
+// highlight text on input focus
+$("input:text").focus(function() {
+	$(this).select();
+});
+
 function postConversion(type) {
 	var fromMeasurement = $('#'+type+'From').val();
 	var toMeasurement = $('#'+type+'To').val();
